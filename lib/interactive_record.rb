@@ -57,6 +57,7 @@ class InteractiveRecord
 
 
 def self.find_by(attribute_hash)
+  binding.pry
 
   DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{attribute_hash.keys} = #{attribute_hash.values}")
 end
