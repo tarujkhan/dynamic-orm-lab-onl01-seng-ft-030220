@@ -57,8 +57,6 @@ class InteractiveRecord
 
 
 def self.find_by(attribute_hash)
-  
-
   DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{attribute_hash.keysfirst} = #{attribute_hash.values.first}")
 end
 
